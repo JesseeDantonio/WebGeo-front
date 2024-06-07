@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    height: 100%;
+}
+
+body,
+html {
+    min-height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-aside {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+    border-radius: 8%;
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 8%;
+    background-size: contain;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.btn-aside:hover {
+    background-color: #6366f1;
+    transform: scale(0.95);
+}
+
+select:hover,
+input[type="color"] {
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: rgb(12, 101, 234);
+}
+
+span {
+    order: 2;
+}
+
+#selectColor {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#selectColor::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+#selectColor::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+aside {
+    transition: width 0.5s ease;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(55 65 81);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(107 114 128);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}

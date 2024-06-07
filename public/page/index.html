@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGeo</title>
+    <link rel="stylesheet" href="/leaflet/leaflet.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/dist/bundle.js"></script>
+</head>
+
+<body>
+
+    <div id="aside" class="flex h-screen">
+
+        <aside class="w-16 bg-gray-800 text-white p-1">
+            <div class="flex flex-col rounded h-[60%]">
+                <div title="Plié" id="fold-down-btn" class="btn-aside h-14"
+                    style="background-image: url(&quot;icons/arrow-narrow-left-alignment-svgrepo-com.svg&quot;); ">
+                </div>
+            </div>
+
+
+            <div id="feature" class="flex flex-col justify-end bg-gray-900 rounded h-[40%]">
+                <div title="Connexion à une base de données PostgreSQL" id="connect-btn" class="btn-aside h-12"
+                    style="background-image: url(&quot;icons/server-svgrepo-com.svg&quot;); ">
+                </div>
+            </div>
+        </aside>
+
+
+
+        <main class="w-full relative">
+
+            <div title="Déplier" id="unfold-btn"
+                class="hidden absolute bottom-1/2 leaflet-control p-1 m-1 btn-aside h-14 w-14 bg-gray-800 z-[800]"
+                style="background-image: url(&quot;icons/arrow-narrow-right-move-svgrepo-com.svg&quot;); ">
+            </div>
+
+            <div id="cursor-coordinates"
+                class="h-10 absolute z-[800] right-0 bottom-5 text-xl font-bold p-2 opacity-100 pointer-events-none">
+            </div>
+
+
+            <div id="map" class="w-full h-full">
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+
+</html>

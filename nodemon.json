@@ -1,0 +1,8 @@
+{
+    "watch": [
+        "public/ts/router"
+    ],
+    "ext": ".ts",
+    "ignore": [],
+    "exec": "npx tsc public/ts/router/index.ts --outDir dist"
+}

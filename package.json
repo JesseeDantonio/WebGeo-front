@@ -1,0 +1,28 @@
+{
+  "name": "webgeo-front",
+  "version": "1.0.0",
+  "description": "Une application Web",
+  "main": "./public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack watch --mode development",
+    "start": "nodemon --exec ts-node ./public/ts/router/index.ts"
+  },
+  "author": "Jessee D'antonio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "leaflet": "^1.9.4",
+    "ts-loader": "^9.5.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.8",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
