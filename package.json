@@ -5,7 +5,8 @@
   "main": "./public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack watch --mode development",
+    "watch-build": "npx webpack watch --mode development",
+    "dev": "nodemon --exec ts-node ./public/ts/router/index.ts && npx webpack watch --mode development",
     "start": "nodemon --exec ts-node ./public/ts/router/index.ts"
   },
   "author": "Jessee D'antonio",

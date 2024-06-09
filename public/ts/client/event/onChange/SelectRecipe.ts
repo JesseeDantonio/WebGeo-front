@@ -1,3 +1,5 @@
+import { URL } from "../../var/global";
+
 let handlerChangeSelectRecipe: (e: Event) => void;
 
 
@@ -9,7 +11,7 @@ const handleSelect = (
     const SCHEMA = REF_SELECT_SCHEMA.value;
 
     if (!isEmpty(SCHEMA)) {
-        fetch(`/api/tables/${SCHEMA}`)
+        fetch(`${URL}/api/tables/${SCHEMA}`)
             .then(response => {
                 if (!response.ok) {
                     response.json().then(data => {

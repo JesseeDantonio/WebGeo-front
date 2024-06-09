@@ -1,6 +1,6 @@
 import { onClickDivImport } from "../onClick/ShowDivImport";
 import { handlerClickConnect } from "../onClick/ShowDivConnect";
-import { GENERATE_ELEMENT } from './../../var/global';
+import { GENERATE_ELEMENT, URL } from './../../var/global';
 import { onClickDivManage } from "../onClick/ShowDivManage";
 
 let handlerSubmitConnect: (e: MouseEvent) => void;
@@ -19,7 +19,7 @@ const handleSubmit = (
     const USER: string = REF_CONNECT?.inputFields[3].value;
     const PASSWORD: string = REF_CONNECT?.inputFields[4].value;
 
-    fetch(`/api/connect/${HOST}/${PORT}/${DATABASE}/${USER}/${PASSWORD}`)
+    fetch(`${URL}/api/connect/${HOST}/${PORT}/${DATABASE}/${USER}/${PASSWORD}`)
         .then(response => {
             if (!response.ok) {
                 response.json().then(data => {
@@ -33,7 +33,7 @@ const handleSubmit = (
         })
         .then(data => {
             // Gérer la première réponse réussie
-            return fetch('/api/schemas');
+            return fetch(`${URL}/api/schemas`);
         })
         .then(response => {
             if (!response.ok) {

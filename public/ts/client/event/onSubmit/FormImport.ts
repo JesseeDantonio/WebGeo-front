@@ -1,6 +1,6 @@
 import * as L from 'leaflet';
 import { GeometryType } from "../../enum/GeometryType";
-import { MAP_CUSTOM, MODAL, GENERATE_ELEMENT, saveLayers, controlLayers } from './../../var/global';
+import { MAP_CUSTOM, MODAL, GENERATE_ELEMENT, saveLayers, controlLayers, URL } from './../../var/global';
 import { MapCustom } from '../../class/MapCustom';
 
 let handlerSubmitImport: (e: SubmitEvent) => void;
@@ -27,7 +27,7 @@ const handleSubmit = (
     let layer: L.GeoJSON | null = null
 
 
-    fetch(`/api/entity/${SELECTED_SCHEMA}/${SELECTED_TABLE}`)
+    fetch(`${URL}/api/entity/${SELECTED_SCHEMA}/${SELECTED_TABLE}`)
         .then(response => {
             if (!response.ok) {
                 response.json().then(data => {
@@ -93,7 +93,7 @@ const handleSubmit = (
             if (layer) {
                 const geoJSONLayer = layer as L.GeoJSON;
                 geoJSONLayer.on('click', (e: L.LeafletMouseEvent) => {
-                    fetch(`/api/entity/${SELECTED_SCHEMA}/${SELECTED_TABLE}/${e.propagatedFrom.feature.properties.id}`)
+                    fetch(`${URL}/api/entity/${SELECTED_SCHEMA}/${SELECTED_TABLE}/${e.propagatedFrom.feature.properties.id}`)
                         .then(response => {
                             if (!response.ok) {
                                 response.json().then(data => {

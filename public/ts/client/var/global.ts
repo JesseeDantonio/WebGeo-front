@@ -12,3 +12,4 @@ export let controlLayers: L.Control.Layers = L.control.layers(undefined, {});
 export let schemas: string[] = [];
 export const MODAL: Modal = new Modal();
 export const GENERATE_ELEMENT: GenerateElement = new GenerateElement();
+export const URL: string = "http://localhost:3000"
