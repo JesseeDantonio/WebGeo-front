@@ -1,8 +1,6 @@
 name: NodeJS with Webpack
 
 on:
-  push:
-    branches: [ "jessee" ]
   pull_request:
     branches: [ "main" ]
 
@@ -24,5 +22,5 @@ jobs:
 
     - name: Build
       run: |
-        npm install
+        npm ci
         npx webpack
